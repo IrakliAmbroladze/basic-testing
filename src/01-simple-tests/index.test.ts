@@ -41,7 +41,10 @@ describe('simpleCalculator tests', () => {
   test('should return null for invalid arguments', () => {
     // Write your test here
     expect(
-      simpleCalculator({ a: 'four', b: 'two', action: Action.Exponentiate }),
+      simpleCalculator({ a: 'four', b: 2, action: Action.Exponentiate }),
+    ).toBeNull();
+    expect(
+      simpleCalculator({ a: 4, b: 'two', action: Action.Exponentiate }),
     ).toBeNull();
   });
 });
