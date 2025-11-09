@@ -26,7 +26,7 @@ const testCases = [
 describe('simpleCalculator', () => {
   // This test case is just to run this test suite, remove it when you write your own tests
   test.each(testCases)(
-    'returns value when inputs and action are valid and returns null in case of invalid of a, b or action',
+    'should return valid value when inputs and action are valid and should return null in case of invalid inputs or action',
     ({ a, b, action, expected }) => {
       const result = simpleCalculator({ a, b, action });
       expect(result).toBe(expected);
